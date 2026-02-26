@@ -19,9 +19,9 @@ body {
 }
 
 
+
 /* Header */
 header {
-    z-index: 100;
     position: sticky;
     display: flex;
     justify-content: space-between;
@@ -29,6 +29,7 @@ header {
     padding: 15px 50px;
     background: var(--black);
     box-shadow: 0px 1.5px 1px var(--white);
+    z-index: 5;
 }
 
 .logo {
@@ -57,6 +58,11 @@ nav a {
     margin: 0 15px;
     font-size: 14px;
     font-weight: 500;
+}
+
+nav a:hover {
+    transition-duration: 0.2s;
+    color: var(--yellow);
 }
 
 .header-right {
@@ -100,11 +106,16 @@ nav a {
     cursor: pointer;
 }
 
+.dropbtn:hover {
+    transition-duration: 0.2s;
+    color: var(--yellow);
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: var(--yellow);
-    min-width: 160px;
+    min-width: 150px;
 }
 
 .dropdown-content a {
@@ -117,6 +128,7 @@ nav a {
 .dropdown-content a:hover {
     color: var(--white);
     background-color: var(--black);
+    transform: scale(1.1);
 }
 
 .dropdown:hover .dropdown-content {
@@ -167,15 +179,13 @@ nav a {
   background-color: var(--yellow);
 }
 
-.icon {
-  min-width: 24px; /* Kunci agar ikon tidak gepeng saat sidebar mengecil */
-  margin-right: 24px;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
+.logo-chart {
+  color: var(--yellow);
 }
 
 .text {
+  margin-left: 10px;
+  font-weight: 500;
   font-size: 14px;
   color: var(--yellow);
   opacity: 0; /* Teks tidak terlihat saat ramping */
@@ -188,43 +198,22 @@ nav a {
   color: var(--black);
 }
 
+.nav-item:hover .logo-chart {
+    color: var(--black);
+}
+
 .menu-wrapper {
   position: relative;
 }
 
-/* Sembunyikan sub-menu secara default */
-.sub-menu {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-  background-color: var(--black);
-  margin: 0 12px;
-  border-radius: 8px;
+
+
+/* Container pembungkus agar posisi submenu mengacu ke sini */
+.nav-item {
+    position: relative;
 }
 
-/* KUNCI: Saat menu-wrapper di-hover, sub-menu terbuka */
-.menu-wrapper:hover .sub-menu {
-  max-height: 200px; /* Beri nilai yang cukup untuk semua item */
-  margin-bottom: 10px;
-  padding: 5px 0;
-}
 
-/* Tambahan: Pastikan sub-menu cuma bisa kebuka kalau sidebar lagi lebar */
-.sidebar:not(:hover) .sub-menu {
-  max-height: 0 !important;
-}
-
-.sub-item {
-  padding: 8px 10px 8px 52px;
-  font-size: 13px;
-  color: var(--yellow);
-  cursor: pointer;
-}
-
-.sub-item:hover {
-  color: var(--white);
-  text-decoration-thickness: var(--white);
-}
 
 /*home*/
 

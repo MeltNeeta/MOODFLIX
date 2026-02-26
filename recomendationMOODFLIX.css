@@ -28,6 +28,7 @@ header {
     padding: 15px 50px;
     background: var(--black);
     box-shadow: 0px 1.5px 1px var(--white);
+    z-index: 1;
 }
 
 .logo {
@@ -56,6 +57,11 @@ nav a {
     margin: 0 15px;
     font-size: 14px;
     font-weight: 500;
+}
+
+nav a:hover {
+    transition-duration: 0.2s;
+    color: var(--yellow);
 }
 
 .header-right {
@@ -99,11 +105,16 @@ nav a {
     cursor: pointer;
 }
 
+.dropbtn:hover {
+    transition-duration: 0.2s;
+    color: var(--yellow);
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: var(--yellow);
-    min-width: 160px;
+    min-width: 150px;
 }
 
 .dropdown-content a {
@@ -116,6 +127,7 @@ nav a {
 .dropdown-content a:hover {
     color: var(--white);
     background-color: var(--black);
+    transform: scale(1.1);
 }
 
 .dropdown:hover .dropdown-content {
@@ -201,6 +213,14 @@ nav a {
 }
 
 
+
+
+
+
+
+
+
+
 /*Header Section*/
 
 section {
@@ -230,8 +250,8 @@ section h1 {
     background-color: #01010175;
     border-radius: 8px;
     padding: 15px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px #0000001a;
     align-items: flex-start;
     position: relative;
     font-family: Arial, sans-serif;
