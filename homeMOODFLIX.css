@@ -301,6 +301,12 @@ nav a:hover {
   transition: transform 0.2s; /* Sedikit efek saat disentuh */
 }
 
+.card:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+  box-shadow: 0 0 0 3px var(--yellow);
+}
+
 .card img {
   width: 100%;
   aspect-ratio: 2/3;       /* Rasio standar poster film */
